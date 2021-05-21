@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+  <include layout="@layout/toolbar_custom" android:id="@+id/toolbar"/>
+   <EditText
+       android:id="@+id/edit_search"
+      android:layout_margin="8dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/toolbar"
+      android:background="@drawable/edit_search_background"
+      android:hint="Search here"
+       android:padding="8dp"
+      android:paddingStart="8dp"
+      android:drawableStart="@drawable/ic_baseline_search_24"/>
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_search"
+        android:layout_marginEnd="8dp"
+        android:gravity="end">
+        <RadioButton
+            android:id="@+id/radio_cash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple_background"
+            android:text="@string/cash"
+            />
+        <RadioButton
+            android:id="@+id/radio_installment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple_background"
+            android:text="@string/installment"
+            />
+    </RadioGroup>
+   <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/recycle_restaurants"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       tools:listitem="@layout/products_cell"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+       android:layout_margin="8dp"
+       app:layout_constraintTop_toBottomOf="@id/radiogroup"
+       app:layout_constraintBottom_toBottomOf="parent"
+      />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

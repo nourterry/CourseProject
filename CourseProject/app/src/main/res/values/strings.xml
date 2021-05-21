@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CourseProject</string>
+    <string name="cash">cash</string>
+    <string name="installment">installment</string>
+    <string name="Settings">Settings</string>
+    <string name="add_new_item">Add New Item</string>
+    <string name="you_must_add_photo">You must add Photo</string>
+    <string name="you_must_fill_all_the_field">You must fill all the field</string>
+    <string name="all_purhase_list">All purchase List</string>
+</resources>
